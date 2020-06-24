@@ -6,7 +6,7 @@ const Form = ({ addTodo }) => {
   let input;
 
   return (
-    <form onSubmit={addTodo}>
+    <form onSubmit={() => addTodo(input)}>
       <input type="text" ref={(node) => (input = node)} />
       <button>Add todo</button>
     </form>
